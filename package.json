@@ -1,6 +1,6 @@
 {
   "name": "frum",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "make great things FRom a nUM",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,10 @@
     "native",
     "loops"
   ],
-  "author": "gui3",
+  "author": {
+    "name": "gui3",
+    "email": "guillaume.silvent@hotmail.fr"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gui3/frum/issues"
