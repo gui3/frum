@@ -6,8 +6,6 @@
 
 Extend a number to offer useful functions
 
-**[try me in the browser console](https://gui3.github.io/frum/.)**
-
 ```js
 // create ranges
 let range = frum(3).to(7.4)
@@ -27,6 +25,8 @@ range.intersects( frum(1).to(4) ) // true
 frum(5).count(callback) // ?target=0, ?step=1
 // for lazy loops (and happy developper)
 ```
+
+**[try me in the browser console](https://gui3.github.io/frum/.)**
 
 > **Date** and other types support is not working,
 > but it's a mid-term goal.
