@@ -13,11 +13,13 @@ Extend a number to offer useful functions
 let range = frum(3).to(7.4)
 
 // iter loops or create array
-range.by(0.1, mappingOrCallback )
+range.by(0.4, mappingOrCallback )
 
 // test overlappings
-// range.intersects( frum(1).to(4) ) // true - not implemented yet
 range.contains(8) // false
+//
+// ! NOT implemented yet:
+range.intersects( frum(1).to(4) ) // true
 
 // and many more to come...
 
@@ -76,8 +78,11 @@ and I will fix that later
 
 const frum = require('frum'); //from node
 
-//making ranges
-let range = frum(3).to(7.4)
+// create frum Number
+let n = frum(3)
+
+// create ranges
+let range = n.to(7.4)
 
 // iterating
 range.by(2, console.log )
