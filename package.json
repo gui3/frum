@@ -11,8 +11,8 @@
     "url": "git+https://github.com/gui3/frum.git"
   },
   "keywords": [
-    "number",
     "numbers",
+    "intervals",
     "extends",
     "native",
     "loops"

@@ -128,7 +128,7 @@
   function frum (n) {
     return new FrumNumber(n)
   }
-  frum.FrumNum = FrumNumber
+  frum.FrumNumber = FrumNumber
   frum.Interval = Interval
   // ------------------------------------------------
   return frum
