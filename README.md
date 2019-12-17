@@ -32,6 +32,10 @@ frum(5).count(callback) // ?target=0, ?step=1
 
 > the same routine as always
 
+There are **NO dependancies**,
+the code used tries to be **non ES6**
+so that it could **run on older browsers**. Let me know if I made mistakes.
+
 > cross compatibility node/browser thanks to moment.js
 
 - Usable in browser
@@ -59,12 +63,12 @@ const frum = require('frum')
 
 for now there is a **trailing decimal** problem
 when you use decimals you might come across
-x.000000000006 numbers that are **false**
+`x.000000000006` numbers that are **not what you wanted**
 
 This is a [known issue from javascript](https://stackoverflow.com/questions/1458633/how-to-deal-with-floating-point-number-precision-in-javascript)
 and I will fix that later
 
-[test it in the browser console](https://gui3.github.io/frum/.)
+**[test me in the browser console](https://gui3.github.io/frum/.)**
 
 ```js
 
