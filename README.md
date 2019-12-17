@@ -76,10 +76,10 @@ and I will fix that later
 const frum = require('frum'); //from node
 
 // create frum Number
-let n = frum(3)
+var n = frum(3)
 
 // create ranges
-let range = n.to(7.4)
+var range = n.to(7.4)
 
 // iterating
 range.by(2, console.log )
@@ -98,7 +98,7 @@ range.contains(8) // false
 range.intersects( frum(1).to(4) ) // true
 
 // and lazy loops
-let log = console.log
+var log = console.log
 frum(5).count(log) // O, 1, 2, 3, 4
 frum(5).count(log, 0) // 5, 4, 3, 2, 1, 0
 frum(5).count(log, 6, 0.2) // 5, 5.2, 5.4, 5.6, 5.8, 6

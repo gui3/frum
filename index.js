@@ -26,7 +26,7 @@
     target = undefined,
     step = 1
   ) {
-    assert(typeof callback === 'function', 'frum.lazyLoop - invalid callback')
+    assert(typeof callback === 'function', 'frum.count - invalid callback')
     if (target === undefined) {
       for (var i = 0; i < this.n; i += step) {
         callback(i)

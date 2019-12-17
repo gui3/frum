@@ -29,7 +29,10 @@ pre {
       <p>
         Use your browser console
         to test <strong>FRUM</strong>'s
-        simple features
+        simple features.
+        <br><br>
+        You already have a <strong>log</strong>
+        shortcut for <strong>console.log</strong>
       </p>
 
       <blockquote cite="">
@@ -42,11 +45,14 @@ pre {
       <h2>Examples reminder :</h2>
 
 <code><pre class="prettyprint">
+
+const frum = require('frum'); //from node
+
 // create frum Number
-let n = frum(3)
+var n = frum(3)
 
 // create ranges
-let range = n.to(7.4)
+var range = n.to(7.4)
 
 // iterating
 range.by(2, console.log )
@@ -65,7 +71,7 @@ range.contains(8) // false
 range.intersects( frum(1).to(4) ) // true
 
 // and lazy loops
-let log = console.log
+var log = console.log
 frum(5).count(log) // O, 1, 2, 3, 4
 frum(5).count(log, 0) // 5, 4, 3, 2, 1, 0
 frum(5).count(log, 6, 0.2) // 5, 5.2, 5.4, 5.6, 5.8, 6
@@ -78,5 +84,8 @@ frum(5).count(log, 6, 0.2) // 5, 5.2, 5.4, 5.6, 5.8, 6
   </body>
   <script type="text/javascript" src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script type="text/javascript">
+var log = console.log
+</script>
 
 </html>
