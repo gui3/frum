@@ -1,6 +1,6 @@
 {
   "name": "frum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "make great things FRom a nUM",
   "main": "index.js",
   "scripts": {

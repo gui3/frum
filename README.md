@@ -22,7 +22,7 @@ range.intersects( frum(1).to(4) ) // true
 // and many more to come...
 
 // ...even a ruby '5.times do' equivalent
-frum(5).count(callback) // ?target=0, ?step=1
+frum(5).count(callback) // ?target=null, ?step=1
 // for lazy loops (and happy developper)
 ```
 
@@ -98,7 +98,7 @@ range.by(2, function (i) {
 range.contains(8) // false
 
 // and lazy loops
-frum(5).count(console.log) // ?target=0, ?step=1
+frum(5).count(console.log) // ?target=null, ?step=1
 
 // ------------------
 
