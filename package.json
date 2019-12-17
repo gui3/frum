@@ -1,0 +1,26 @@
+{
+  "name": "frum",
+  "version": "0.0.0",
+  "description": "make great things FRom a nUM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gui3/frum.git"
+  },
+  "keywords": [
+    "number",
+    "numbers",
+    "extends",
+    "native",
+    "loops"
+  ],
+  "author": "gui3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gui3/frum/issues"
+  },
+  "homepage": "https://github.com/gui3/frum#readme"
+}
