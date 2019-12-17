@@ -21,7 +21,7 @@
     return this
   }
 
-  FrumNumber.prototype.lazyLoop = function (
+  FrumNumber.prototype.count = function (
     callback,
     target = 0,
     step = 1

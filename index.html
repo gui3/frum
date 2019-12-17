@@ -3,6 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>FRUM index page</title>
+    <style media="screen">
+
+body {
+  padding: 4em;
+  font-family: Consolas, monospace, sans-serif;
+}
+pre {
+  border: 1px solid #012;
+  background: #fafaff;
+  /*color: #6C8;*/
+  padding: 1em !important;
+  border-radius: 0.8em;
+  box-shadow: 2px 2px 3px inset #888;
+}
+
+    </style>
   </head>
   <body>
 
@@ -16,22 +32,41 @@
         simple features
       </p>
 
-      <h2>Features reminder :</h2>
+      <blockquote cite="">
+        Remember there is the <strong>trailing decimals</strong>
+        (5.000000000002) problem.
+        <br>
+        This should be fixed soon
+      </blockquote>
 
-<code>
+      <h2>Examples reminder :</h2>
 
-const frum = require('frum'); //from node
+<code><pre class="prettyprint">
+//making ranges
+let range = frum(3).to(7.4)
 
-frum(5).reach( callback )
-// is the same as :
-for (let i = 0, i < 5, i++) {
-  callback(i)
-}
+// iterating
+range.by(2, console.log )
 
-</code>
+// creating arrays
+range.by(2) //simple
+
+range.by(2, function (i) {
+  return 'I said ' + i + ' ! ' // mapping
+})
+
+// overlappings
+range.contains(8) // false
+
+// and lazy loops
+frum(5).count(console.log) // ?target=0, ?step=1
+
+</pre></code>
 
     </div>
 
   </body>
   <script type="text/javascript" src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
 </html>

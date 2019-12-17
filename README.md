@@ -1,6 +1,7 @@
 # frum
 
-> FRom a nUM make great things.
+**FR**om a n**UM** make great things.
+
 > Inspired by ruby number methods
 
 Extend a number to offer useful functions
@@ -13,7 +14,7 @@ let range = frum(3).to(7.4)
 range.by(0.1, mappingOrCallback )
 
 // test overlappings
-range.intersects( frum(1).to(4) ) // true
+// range.intersects( frum(1).to(4) ) // true - not implemented yet
 range.contains(8) // false
 
 // and many more to come...
@@ -26,49 +27,12 @@ frum(5).count(callback) // ?target=0, ?step=1
 > **Date** and other types support is not working,
 > but it's a mid-term goal.
 
-# Use
 
-> as simple as that
-
-[test it in the browser console](#index.js)
-
-```js
-
-const frum = require('frum'); //from node
-
-// for the exemples sake
-// here is a callback function :
-function callback ( val, index ) {
-  console.log( 'v: ' + val + '| i: ' + index )
-}
-
-// actual examples ----------
-
-frum(3).to(8).do( callback )
-
-// IS THE SAME AS :
-let ix = 0;
-for (let i = 3, i <= 8, i += 1) {
-  callback(i, ix);
-  ix += 1;
-}
-
-// the most lazy case :
-frum(5).reach( callback )
-// IS THE SAME AS :
-for (let i = 0, i < 5, i++) {
-  callback( i, i ) // 2 times because index
-}
-
-frum(4)
-
-frum(8)
-
-```
-
-# Installation
+# Install
 
 > the same routine as always
+
+> cross compatibility node/browser thanks to moment.js
 
 - Usable in browser
 
@@ -86,4 +50,53 @@ npm install frum
 
 ```js
 const frum = require('frum')
+```
+
+
+# Use (not written yet)
+
+> as simple as that
+
+for now there is a **trailing decimal** problem
+when you use decimals you might come across
+x.000000000006 numbers that are **false**
+
+This is a [known issue from javascript](https://stackoverflow.com/questions/1458633/how-to-deal-with-floating-point-number-precision-in-javascript)
+and I will fix that later
+
+[test it in the browser console](https://gui3.github.io/frum/.)
+
+```js
+
+const frum = require('frum'); //from node
+
+//making ranges
+let range = frum(3).to(7.4)
+
+// iterating
+range.by(2, console.log )
+
+// creating arrays
+range.by(2) //simple
+
+range.by(2, function (i) {
+  return 'I said ' + i + ' ! ' // mapping
+})
+
+// overlappings
+range.contains(8) // false
+
+// and lazy loops
+frum(5).count(console.log) // ?target=0, ?step=1
+
+// ------------------
+
+// the most lazy case :
+frum(5).count(callback)
+// IS THE SAME AS :
+for (let i = 0, i < 5, i++) {
+  callback( i )
+}
+
+
 ```
