@@ -23,11 +23,11 @@
 
   FrumNumber.prototype.count = function (
     callback,
-    target = null,
+    target = undefined,
     step = 1
   ) {
     assert(typeof callback === 'function', 'frum.lazyLoop - invalid callback')
-    if (target === null) {
+    if (target === undefined) {
       for (var i = 0; i < this.n; i += step) {
         callback(i)
       }

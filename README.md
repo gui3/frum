@@ -15,14 +15,11 @@ range.by(0.4, mappingOrCallback )
 
 // test overlappings
 range.contains(8) // false
-//
-// ! NOT implemented yet:
-range.intersects( frum(1).to(4) ) // true
 
 // and many more to come...
 
 // ...even a ruby '5.times do' equivalent
-frum(5).count(callback) // ?target=null, ?step=1
+frum(5).count(callback) // ?target=undefined, ?step=1
 // for lazy loops (and happy developper)
 ```
 
@@ -96,18 +93,16 @@ range.by(2, function (i) {
 
 // overlappings
 range.contains(8) // false
+//
+// ! NOT implemented yet:
+range.intersects( frum(1).to(4) ) // true
 
 // and lazy loops
-frum(5).count(console.log) // ?target=null, ?step=1
-
-// ------------------
-
-// the most lazy case :
-frum(5).count(callback)
-// IS THE SAME AS :
-for (let i = 0, i < 5, i++) {
-  callback( i )
-}
-
+let log = console.log
+frum(5).count(log) // O, 1, 2, 3, 4
+frum(5).count(log, 0) // 5, 4, 3, 2, 1, 0
+  // !!! reversed (source -> target)
+frum(5).count(log, 6, 0.2) // 5, 5.2, 5.4, 5.6, 5.8, 6
+  // !!! with trailing due to floating point !!!
 
 ```

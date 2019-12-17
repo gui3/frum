@@ -42,13 +42,11 @@ pre {
       <h2>Examples reminder :</h2>
 
 <code><pre class="prettyprint">
-
 // create frum Number
 let n = frum(3)
 
 // create ranges
 let range = n.to(7.4)
-
 
 // iterating
 range.by(2, console.log )
@@ -62,9 +60,17 @@ range.by(2, function (i) {
 
 // overlappings
 range.contains(8) // false
+//
+// ! NOT implemented yet:
+range.intersects( frum(1).to(4) ) // true
 
 // and lazy loops
-frum(5).count(console.log) // ?target=null, ?step=1
+let log = console.log
+frum(5).count(log) // O, 1, 2, 3, 4
+frum(5).count(log, 0) // 5, 4, 3, 2, 1, 0
+  // !!! reversed (source -> target)
+frum(5).count(log, 6, 0.2) // 5, 5.2, 5.4, 5.6, 5.8, 6
+  // !!! with trailing due to floating point !!!
 
 </pre></code>
 
