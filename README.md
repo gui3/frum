@@ -6,6 +6,8 @@
 
 Extend a number to offer useful functions
 
+**[try me in the browser console](https://gui3.github.io/frum/.)**
+
 ```js
 // create ranges
 let range = frum(3).to(7.4)
@@ -68,7 +70,7 @@ when you use decimals you might come across
 This is a [known issue from javascript](https://stackoverflow.com/questions/1458633/how-to-deal-with-floating-point-number-precision-in-javascript)
 and I will fix that later
 
-**[test me in the browser console](https://gui3.github.io/frum/.)**
+**[try me in the browser console](https://gui3.github.io/frum/.)**
 
 ```js
 
