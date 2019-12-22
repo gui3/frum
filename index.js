@@ -114,15 +114,17 @@
     }
   }
 
-  Interval.prototype.intersection = function (set) {
+  Interval.prototype.intersects = function (set) {
     assert(
+      typeof set === typeof this.start ||
       set instanceof Interval,
-      'invalid set parameter for .instersection'
+      'invalid set parameter for .contains'
     )
-    return new Interval(
-      this.low() < set.low() ? set.low() : this.low(),
-      this.up() > set.up() ? set.up() : this.up()
-    )
+    if (set instanceof Interval) {
+      return this.up() >= set.low() && this.low() <= set.up()
+    } else {
+      return set <= this.up() && set >= this.low()
+    }
   }
 
   function frum (n) {

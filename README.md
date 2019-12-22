@@ -15,6 +15,7 @@ range.by(0.4, mappingOrCallback )
 
 // test overlappings
 range.contains(8) // false
+range.intersects(frum(1).to(5)) // true
 
 // and many more to come...
 
